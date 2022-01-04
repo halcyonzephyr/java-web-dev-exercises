@@ -14,14 +14,13 @@ public class Alice {
         
         int location = aliceText.indexOf(searchTerm);
         int length = searchTerm.length();
-        String newAliceTextPrefix = aliceText.substring(0,length);
-        String newAliceTextSuffix = aliceText.substring(length, aliceText.length());
-        String newAliceTextConcatonated = newAliceTextPrefix.concat(newAliceTextSuffix);
+        String modifiedSentence = aliceText.replace(searchTerm, "");
+
 
 
         System.out.println("The notion that your search term is found in Alice in Wonderland is " + textContainsSearch + ". You can find your search term at index " + location + ". Its length is " + length + ". Without the term, the text would read: ");
 
-        System.out.println(newAliceTextConcatonated);
+        System.out.println(modifiedSentence);
 
     }
 }
