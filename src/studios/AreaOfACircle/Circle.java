@@ -1,4 +1,4 @@
-package com.company;
+package studios.AreaOfACircle;
 
 public class Circle {
     public static Double getArea (Double radius) {
