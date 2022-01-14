@@ -3,7 +3,6 @@ package studios.CH4RestaurantMenu;
 import java.util.Date;
 
 public class MenuItem {
-    //Name, Price, Descrip, Category, Newness, DateAdded
 
     private String name;
     private double price;
