@@ -1,4 +1,4 @@
-package exercises;
+package exercises.CH2;
 import java.util.Scanner;
 public class RectangleAreaCalculator {
     public static void main(String[] args) {

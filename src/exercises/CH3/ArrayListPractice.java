@@ -1,4 +1,4 @@
-package exercises;
+package exercises.CH3;
 
 import java.util.*;
 import java.util.Scanner;
@@ -44,7 +44,7 @@ public class ArrayListPractice {
         String str[] = greenEggs.split(" ");
         List nl = new ArrayList();
         nl = Arrays.asList(str);
-        letterCounter(nl, wordLength);
+        letterCounter((ArrayList<String>) nl, wordLength);
     }
 
 

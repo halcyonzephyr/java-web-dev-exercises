@@ -1,4 +1,4 @@
-package exercises;
+package exercises.CH3;
 
 import java.util.*;
 

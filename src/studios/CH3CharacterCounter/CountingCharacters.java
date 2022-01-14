@@ -1,7 +1,6 @@
-package studios.CharacterCounter;
+package studios.CH3CharacterCounter;
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Scanner;
 public class CountingCharacters {
     public static void main(String[] args) {

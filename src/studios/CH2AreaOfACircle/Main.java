@@ -1,4 +1,4 @@
-package studios.AreaOfACircle;
+package studios.CH2AreaOfACircle;
 
 import java.util.Scanner;
 
