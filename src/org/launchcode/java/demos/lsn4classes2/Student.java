@@ -5,8 +5,8 @@ public class Student {
     private static int nextStudentId = 1;
     private String name;
     private int studentId;
-    private int numberOfCredits = 0;
-    private double gpa = 0.0;
+    private int numberOfCredits;
+    private double gpa;
 
     public Student (String name, int studentId, int numberOfCredits, double gpa) {
         this.name = name;
@@ -46,7 +46,7 @@ public class Student {
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
         // Update the appropriate fields: numberOfCredits, gpa
-        Double totalScore = this.gpa * this.numberOfCredits;
+        double totalScore = this.gpa * this.numberOfCredits;
         totalScore += courseCredits * grade;
         this.numberOfCredits += courseCredits;
         this.gpa = totalScore / numberOfCredits;
@@ -74,8 +74,7 @@ public class Student {
         if (target.getClass() != getClass()){
             return false;
         }
-        Student theStudent = (Student)target;
-        return theStudent.getStudentId() == getStudentId();
+        return target.getStudentId() == getStudentId();
     }
 
     public String getName() {

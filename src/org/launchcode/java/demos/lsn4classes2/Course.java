@@ -1,11 +1,16 @@
 package org.launchcode.java.demos.lsn4classes2;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Course {
-    private String topic;
+    private final String topic;
     private Teacher instructor;
     private ArrayList<Student> enrolledStudents;
+
+    public Course(String topic) {
+        this.topic = topic;
+    }
 
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather than
     //  just the class fields.
@@ -25,8 +30,10 @@ public class Course {
         if (name.getClass() != getClass()){
             return false;
         }
-        Course courseName = name;
-        return courseName.instructor == instructor && courseName.topic == topic;
+        return name.instructor == instructor && Objects.equals(name.topic, topic);
     }
 
+    public void setEnrolledStudents(ArrayList<Student> enrolledStudents) {
+        this.enrolledStudents = enrolledStudents;
+    }
 }

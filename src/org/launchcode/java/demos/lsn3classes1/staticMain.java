@@ -6,7 +6,7 @@ public class staticMain {
         //System.out.println(AnExample.exampleNonStaticVariable); // this doesn't work, because you're trying to call a non-static variable in a static way
         staticExample ex = new staticExample();
 
-        System.out.println(ex.exampleStaticVariable); // this works, because you're calling a static variable in a non-static way
+        System.out.println(staticExample.exampleStaticVariable); // this works, because you're calling a static variable in a non-static way
         System.out.println(ex.exampleNonStaticVariable); // this works, because you're calling a non-static variable in a non-static way
         System.out.println("hello");
 
