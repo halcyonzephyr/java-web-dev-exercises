@@ -1,6 +1,7 @@
 package studios.CH4RestaurantMenu;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class MenuItem {
 
@@ -68,4 +69,21 @@ public class MenuItem {
         this.newness = newness;
     }
 
+    public static boolean isNew (MenuItem aMenuItem) {
+        if (aMenuItem.newness == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public void printMenuItem (MenuItem aMenuItem) {
+        System.out.println(aMenuItem.name + ": " + aMenuItem.description);
+    }
+
+    public boolean equals(MenuItem aMenuItem) {
+        if (this == aMenuItem) return true;
+        if (aMenuItem == null || getClass() != aMenuItem.getClass()) return false;
+        MenuItem menuItem = (MenuItem) aMenuItem;
+        return Double.compare(menuItem.price, price) == 0 && newness == menuItem.newness && Objects.equals(name, menuItem.name) && Objects.equals(description, menuItem.description) && Objects.equals(category, menuItem.category) && Objects.equals(dateAdded, menuItem.dateAdded);
+    }
 }
