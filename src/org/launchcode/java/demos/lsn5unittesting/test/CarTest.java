@@ -1,7 +1,8 @@
 package org.launchcode.java.demos.lsn5unittesting.test;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
-import org.junit.Test;
 import org.launchcode.java.demos.lsn5unittesting.main.Car;
 
 import static org.junit.Assert.*;

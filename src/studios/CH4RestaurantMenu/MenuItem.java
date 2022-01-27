@@ -77,7 +77,7 @@ public class MenuItem {
         }
     }
     public void printMenuItem (MenuItem aMenuItem) {
-        System.out.println(aMenuItem.name + ": " + aMenuItem.description);
+        System.out.println(aMenuItem.name + ": " + aMenuItem.description + ", $" + aMenuItem.price);
     }
 
     public boolean equals(MenuItem aMenuItem) {

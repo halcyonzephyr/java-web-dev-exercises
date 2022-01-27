@@ -1,24 +1,23 @@
 package studios.CH4RestaurantMenu;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Menu {
-    private static ArrayList menu = new ArrayList<>();
+    private ArrayList<MenuItem> items;
     private Date lastUpdated;
 
-    public Menu(ArrayList appetizers, ArrayList mains, ArrayList desserts, Date lastUpdated) {
-        this.menu = appetizers;
+    public Menu(ArrayList<MenuItem> items, Date lastUpdated) {
+        this.items = items;
         this.lastUpdated = lastUpdated;
     }
 
-    public ArrayList getMenu() {
-        return menu;
+    public ArrayList<MenuItem> getItems() {
+        return items;
     }
 
-    public void setMenuItems(ArrayList menuItems) {
-        this.menu = menuItems;
+    public void setItems(ArrayList<MenuItem> items) {
+        this.items = items;
     }
 
     public Date getLastUpdated() {
@@ -29,22 +28,22 @@ public class Menu {
         this.lastUpdated = lastUpdated;
     }
 
-    public static void addMenuItem (MenuItem aMenuItem) {
-        menu.add(aMenuItem);
+    public ArrayList<MenuItem> addMenuItem (MenuItem aMenuItem) {
+        this.items.add(aMenuItem);
+        return items;
     }
 
-    public static void removeMenuItem (MenuItem aMenuItem) {
-        if (menu.contains(aMenuItem)) {
-            menu.remove(aMenuItem);
+    public ArrayList<MenuItem> removeMenuItem (MenuItem aMenuItem) {
+        if(this.items.contains(aMenuItem)) {
+            this.items.remove(aMenuItem);
         }
-
     }
 
-    public static Date lastUpdated (Menu aMenu) {
-        return aMenu.lastUpdated;
+    public String lastUpdated() {
+        return ("The menu was last updated on " + this.getLastUpdated());
     }
-    public static ArrayList printMenuAll (Menu aMenu) {
-        return aMenu.getMenu();
+    public void printMenuAll (Menu aMenu) {
+        System.out.println(System.out.println(aMenuItem.name + ": " + aMenuItem.description + ", $" + aMenuItem.price););
     }
 
 
