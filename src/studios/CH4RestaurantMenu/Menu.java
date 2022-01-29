@@ -37,13 +37,14 @@ public class Menu {
         if(this.items.contains(aMenuItem)) {
             this.items.remove(aMenuItem);
         }
+        return null;
     }
 
     public String lastUpdated() {
         return ("The menu was last updated on " + this.getLastUpdated());
     }
     public void printMenuAll (Menu aMenu) {
-        System.out.println(System.out.println(aMenuItem.name + ": " + aMenuItem.description + ", $" + aMenuItem.price););
+        // System.out.println(System.out.println(aMenuItem.name + ": " + aMenuItem.description + ", $" + aMenuItem.price));
     }
 
 
